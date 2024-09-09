@@ -1,0 +1,160 @@
+.card-text-round {
+    //min-height: 316px;
+    min-height: 275px;
+    box-shadow: 1px 3px 6px rgba(238, 238, 238, .85);
+    border: 1px solid #fcdcc3;
+    border-radius: 66px;
+    //padding: 70px 32px;
+    padding: 32px;
+    color: $color-primary;
+    //background-color: rgba(	4, 41, 70, .9);
+    background-color: #fcdcc3;
+    display: flex;
+    align-items: center;
+
+    p {
+        strong {
+            font-weight: 600 !important;
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width:991px) {
+        min-height: auto;
+    }
+}
+
+.card-img-round {
+    position: relative;
+
+    img {
+        width: 250px;
+    }
+
+    .card-img-round-text {
+        background: $color-primary;
+        border-radius: 60px;
+        width: 250px;
+        padding: 24px 32px;
+        color: $color-white;
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        height: 106px;
+        display: flex;
+        align-items: center;
+
+        .wp-block-group__inner-container {
+            width: 100%;
+        }
+
+        p {
+            text-align: center;
+
+            &:first-child {
+                margin-bottom: 6px;
+                font-size: 19px;
+            }
+
+            &:last-child {
+                line-height: 18px;
+            }
+        }
+    }
+
+    @media (max-width:991px) {
+        .wp-block-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-img-round-text {
+            right: 100px;
+        }
+    }
+}
+
+.card-numero-round {
+    position: relative;
+    margin-bottom: 28px;
+    
+    .card-num {
+        color: #61788A;
+        font-size: 200px;
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        left: 0px;
+
+        + p {
+                margin-bottom: 20px;
+                font-size: 20px;
+
+                strong {
+                    font-weight: 600!important;
+                }
+        }
+        
+    }
+
+    &.card-num-right {
+        .card-num {
+            right: -30px;
+            left: auto;
+            top: 25px;
+        }
+        .card-numero-round-text {
+            margin-left: auto;
+        }
+    }
+
+    &.card-num-left {
+        .card-num {
+            left: -50px;
+        }
+    }
+
+    .card-numero-round-text {
+        box-shadow: 1px 3px 6px rgba(238, 238, 238, .85);
+        background-color: $color-white;
+        border-radius: 86px;
+        min-height: 288px;
+        width: 800px;
+        padding: 60px 76px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+
+        p {
+            &:first-child {
+                margin-bottom: 20px;
+                font-size: 20px;
+
+                strong {
+                    font-weight: 600!important;
+                }
+            }
+        }
+
+        @media (max-width:1199px) {
+            width: auto;
+        }
+    }
+}
+
+#quiero-donar {
+    @media (max-width:991px) {
+        margin-top: 50px;
+    }
+}
+.form-donacion {
+    padding-top:60px;
+    padding-bottom:60px;
+    margin-top: 250px;
+
+    .contenido {
+        p:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}

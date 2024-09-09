@@ -1,2 +1,1 @@
-# NextWPress
-One fully customizable Next.js template
+# Hacce Next.js

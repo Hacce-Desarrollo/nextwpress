@@ -1,0 +1,39 @@
+
+    .yoast-breadcrumbs {
+        position: absolute;
+        left: 24px;
+        top: 82px;
+
+        span {
+            display: inline-flex;
+
+            span {
+                font-size: 12px;
+                color: $color-primary;
+                text-transform: uppercase;
+                display: inline-flex;
+                align-items: center;
+
+                &.breadcrumb_last {
+                    font-weight: 600;
+                }
+
+                &:not(.breadcrumb_last) {
+                    &::after {
+                        content: "";
+                        background-image: url('/images/icon-arrow-breadcrumb.svg');
+                        display: block;
+                        width: 4px;
+                        height: 7px;
+                        margin: 0 12px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+
+        @media (max-width:767px) {
+            top: 60px;
+        }
+    }

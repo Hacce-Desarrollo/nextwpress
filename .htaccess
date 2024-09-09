@@ -1,0 +1,16 @@
+<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|svg|webp|avif|js|css)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+
+DirectorySlash Off
+Options -MultiViews
+Options -Indexes
+
+RewriteRule ^en$ en.html [L]
+RewriteRule ^es$ es.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+ErrorDocument 404 /404.html

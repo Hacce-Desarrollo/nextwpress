@@ -1,0 +1,81 @@
+# Si no es https, redirigimos
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Proteger acceso si es servidor.gal y fuera de la oficina
+#<If "%{HTTP_HOST} -strmatch '*.servidor.gal' && %{HTTP:X-Forwarded-For} != '54.36.177.68' && %{HTTP:X-Forwarded-For} != '83.48.20.72'">
+#        AuthType Basic
+#        AuthName "Entorno restringido"
+#        AuthUserFile /var/www/vhosts/haccenext.servidor.gal/.htpasswd
+#        Require valid-user
+#</If>
+
+# No mostrar información del servidor ni PHP
+ServerSignature Off
+Header unset X-Powered-By
+# Proteger cookies y forzar transmisión segura
+<ifModule mod_headers.c>
+	Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+	Header always edit Set-Cookie (.*) "$1; HttpOnly"
+	<IfDefine SSL>
+		# Si la web usa HTTPS, ponemos también "Secure" a 1
+		Header always edit Set-Cookie (.*) "$1; Secure"
+	</IfDefine>
+</ifModule>
+# Protección MIME-Sniffing
+<IfModule mod_headers.c>
+ 	Header set X-Content-Type-Options nosniff
+</IfModule>
+# Protección Cross-Site-Scripting
+<IfModule mod_headers.c>
+ 	Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+# Bloquear <script> en query string
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC]
+RewriteRule ^(.*)$ /$1?$2 [R=301,L]
+# Protección contra inclusión en un IFRAME
+Header set X-Frame-Options SAMEORIGIN
+# Impedir peticiones TRACE
+RewriteEngine on
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
+# No mostrar contenido directorios
+Options -Indexes
+# Proteccion enumeracion de usuarios WP
+<IfModule mod_rewrite.c>
+	RewriteCond %{REQUEST_URI} !^/wp-admin [NC]
+	RewriteCond %{QUERY_STRING} author=\d
+	RewriteRule .* /? [L,R=301]
+
+	RewriteRule wp-json/wp/v2/users /? [L,R=301]
+</IfModule>
+
+# BEGIN WordPress
+# Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /cms/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /cms/index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Bloquear aceso a ficheros sensibles de la instalacion de WP
+<IfModule mod_rewrite.c>
+RewriteRule (?:readme|leeme|license|licencia|changelog|-config|-sample)\.(?:php|md|txt|html?) - [R=404,NC,L]
+</IfModule>
+
+# Bloquear aceso a adminer.php
+<IfModule mod_rewrite.c>
+RewriteRule (?:[Aa]dminer|__[Aa]dminer|_[Aa]dminer)\.(?:php?) - [R=404,NC,L]
+</IfModule>
+

@@ -1,0 +1,21 @@
+@import "../../haccestrap/sass/theme_variables";
+@import "theme_variables";
+
+@import "../../haccestrap/sass/bootstrap5/bootstrap";
+@import "../../haccestrap/sass/wp_basic_styles";
+@import "../../haccestrap/sass/picostrap";
+@import "../../haccestrap/sass/woocommerce";
+@import "../../haccestrap/sass/custom";
+
+@import "../../haccestrap/sass/blog_listado";
+@import "../../haccestrap/sass/header";
+@import "../../haccestrap/sass/footer";
+@import "../../haccestrap/sass/search";
+@import "../../haccestrap/sass/404";
+
+
+// UNCOMMENT TO DEBUG YOUR PAGE: This code helps debugging your page, hightlighting main <section>s, bootstrap containers, rows, columns and .lc-block elements.
+//@import "../../haccestrap/sass/debug-structure-helper";
+
+@import "custom.scss";
+@import "global.scss";

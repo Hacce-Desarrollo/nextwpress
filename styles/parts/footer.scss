@@ -1,0 +1,54 @@
+.footer {
+    background-color: $color-primary;
+
+    .wrapper-footer-widgets {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255,255,255,.2);
+
+        .footer-contact-info {
+            color: $color-white;
+
+            p {
+                font-weight: 200;
+
+                &:first-child {
+                    margin-bottom: 12px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    .wrapper-footer-colophon {
+        padding: 30px 0 40px;
+
+        .text-legal {
+            color: $color-white;
+            opacity: .6;
+            font-size: 13px;
+            line-height: 25px;
+        }
+
+        #legal-menu {
+            .menu-item {
+                a {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                       text-decoration: underline;
+                    }
+                }
+                &:not(:last-child) {
+                    &::after {
+                        content: "|";
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

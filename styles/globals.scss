@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/**
+  GOLBALS
+**/
+.is-rounded-image img{
+  border-radius: 50px;
+}
+
+
+/** 
+  FUENTES
+**/
+.font-monsterrat {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+
+/** 
+  COLORES
+**/
+.text-primary {
+  color: #042946;
+}
+.text-white {
+  color: #ffffff;
+}
+
+
+/** 
+  TÍTULOS Y TEXTOS
+**/
+.h1-title {
+  letter-spacing: 3.2px;
+  font-family: var(--mainFontBold);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 26px;
+
+  @media (max-width:991px) {
+  }
+
+  @media (max-width:767px) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+.h2-title {
+  letter-spacing: 2.6px;
+  font-family: var(--mainFontBold);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 33px;
+  margin-bottom: 26px;
+
+  @media (max-width:991px) {
+  }
+
+  @media (max-width:767px) {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+}
+
+.wp-block-hacce-wrapper {
+  p {
+    //font-size: 16px;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 20px;
+
+    strong {
+      font-weight: 500;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.list-bullet {
+  list-style: disc;
+  padding-left: 16px;
+
+  li {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: #042946;
+  }
+}
+
+
+/** 
+  WRAPPERS
+**/
+.section {
+  padding: 100px 0;
+
+  &.pt-0 {
+    padding-top: 0;
+  }
+
+  &.pb-0 {
+    padding-bottom: 0;
+  }
+
+  .container {
+    .wp-block-columns:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width:767px) {
+    padding: 50px 0;
+  }
+}
+
+.gap-2 {
+  gap: 2rem!important;
+}
+
+.ps-relative {
+  position: relative;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y)* -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+.row>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col-md-4 {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+
+  @media (max-width:767px) {
+    width: 100%;
+  }
+}
+
+
+/** 
+  ALINEACIÓN
+**/
+.text-center {
+  text-align: center;
+}
+
+
+/**
+  FONDOS
+**/
+.bg-grey {
+  background-color: #F5F6F7;
+}
+.bg-blue {
+  background-color: #042946;
+}
+.bg-orange {
+  background-color: #fcdcc3;
+}
+
+
+/** 
+  MÁRGENES
+**/
+.mb-0 {
+  margin-bottom: 0!important;
+}
+
+.google_map {
+  position: relative;
+  margin-top:-100px;
+
+  &::after {
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    display: block;
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  } 
+}
+.z-index-up {
+  z-index: 2;
+}
+.first-block-negative {
+  position: relative;
+  z-index: 2;
+  margin-top: -160px;
+  padding-top: 0;
+}
+.fix-block-after-hero {
+  margin-top: -175px;
+}
+.mt-minus-100 {
+  margin-top: -100px;
+
+  @media (max-width:767px) {
+    margin-top: -50px;
+  }
+}
+
+@media (min-width:992) {
+  .d-lg-none {
+    display: none!important;
+  }
+}
+
+@media (max-width:1199px) {
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media (max-width:991px) {
+  .hide-md {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .d-md-none {
+    display: none!important;
+  }
+}
+
+@media (max-width:767px) {
+  .d-xs-none {
+    display: none!important;
+  }
+}
+
+@media (max-width:991px) {
+  .mb-24-md {
+    margin-bottom: 24px;
+  }
+}
+
+.w-100 {
+  img {
+    width: 100%;
+  }
+}
+
+.w140 {
+  width: 140px!important;
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --mainFont: var(--font-caviarDreams);
+    --mainFontBold: var(--font-caviarDreamsBold);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.blog main#main{
+    overflow: hidden;
+}
+
+.content-404{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed-post-image{
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    @media(max-width:768px) {
+        min-height: 50vh;
+    }
+}
+
+.mainFont {
+    font-family: var(--mainFont);
+} 
+
+.mainFontBold {
+    font-family: var(--mainFontBold);
+} 
+
+$color-primary: #042946;
+$color-white: #ffffff;
+
+
+@import 'parts/header.scss';
+@import 'parts/footer.scss';
+@import 'parts/cabecera-default.scss';
+@import 'parts/breadcrumb.scss';
+@import 'parts/boton-flotante.scss';
+@import 'parts/forms.scss';
+
+@import 'elements/button.scss';
+@import 'elements/block-tratamientos.scss';
+@import 'elements/block-cta-azul.scss';
+@import 'elements/accordion.scss';
+
+@import 'pages/home.scss';
+@import 'pages/equipo.scss';
+@import 'pages/instalaciones.scss';
+@import 'pages/donacion.scss';
+@import 'pages/tratamientos.scss';
+@import 'pages/blog.scss';
+@import 'pages/contacto.scss';

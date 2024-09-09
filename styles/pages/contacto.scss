@@ -1,0 +1,122 @@
+.contact_page  {
+
+    .cta-info.bg-blue {
+        position: relative;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .bloque-cta.cta-right {
+        height: auto;
+
+        .img-fondo {
+            top: -100px;
+        }
+
+        .container {
+            align-items: flex-end;
+        }
+
+    }
+
+    .block-contact-info {
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 100px;
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }   
+
+            img {
+                margin-right: 30px;
+            }
+
+            span {
+                color: $color-primary;
+                font-size: 18px;
+                letter-spacing: 1.8px;
+                line-height: 24px;
+                font-family: var(--mainFont);
+
+                a {
+                    color: $color-primary;
+                }
+
+            }
+
+            &:first-child {
+                width: 350px;
+
+                span {
+                    text-transform: uppercase;
+                }
+
+            }
+
+        }
+
+    }
+
+    .tabs-forms {
+
+        .p-tabview-panels {
+            background-color: transparent;
+            padding: 0px;
+        }
+
+        .p-tabview-nav-container {
+
+            ul.p-tabview-nav {
+                background-color: transparent;
+                margin-bottom: 35px;
+                width: 100%;
+                margin-top: 20px;
+
+                li {
+                    border: 1px solid $color-white;
+                    width: 50%;
+                    text-align: center;
+
+                    a {
+                        background-color: transparent;
+                        font-size: 14px;
+                        font-family: var(--mainFont);
+                        line-height: 16px;
+                        font-weight: 400;
+                        justify-content: center;
+                    }
+
+                    &.p-tabview-selected {
+                        background-color: $color-white;
+
+                        a {
+                            color: $color-primary;
+                        }
+
+                    }
+
+                    &:first-child {
+                        //border-radius: 50px 0 0 50px;
+
+                        + li {
+                            border-radius: 0 50px 50px 0;
+                        }
+
+                    }
+                        
+                }
+
+            }
+
+        }
+
+    }
+    
+}

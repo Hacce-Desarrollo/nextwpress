@@ -1,0 +1,102 @@
+.accordion-haccenext {
+    details {
+        border-radius: 4px;
+        box-shadow: 1px 3px 6px #00000029;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        summary {
+            list-style-type: none;
+            padding: 24px 32px;
+            background-color: #F5F6F7;
+            color: $color-primary;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 1.8px;
+            font-family: var(--mainFontBold);
+            position: relative;
+            transition: 0.3s all;
+            height: 70px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 35px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background-image: url('/images/icon-plus.svg');
+                
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            @media (max-width:767px) {
+                padding-right: 40px;
+                padding-left: 20px;
+                height: auto;
+                font-size: 15px;
+
+                &::after {
+                    right: 20px;
+                }
+            }
+        }
+
+        p {
+            padding: 30px 140px 34px 30px;
+            background-color: #F5F6F7;
+            color: $color-primary;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+
+            @media (max-width:767px) {  
+                padding-right: 40px;
+            }
+        }
+
+        ul {
+            padding: 30px 140px 34px 30px;
+            background-color: #F5F6F7;
+
+            li {
+                color: $color-primary;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+            }
+
+            @media (max-width:767px) {  
+                padding-right: 40px;
+            }
+        }
+
+        &[open] {
+            summary {
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+        &:hover {
+            summary {
+                background-color: #b7c3cd;
+                color: $color-primary;
+            }
+        }
+
+        &[open] {
+            summary {
+                &::after {
+                    background-image: url('/images/icon-minus.svg');
+                }
+            }
+        }
+    }
+}

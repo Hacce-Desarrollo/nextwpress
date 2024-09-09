@@ -1,0 +1,15 @@
+{
+    "name_form_label": "Nombre *",
+    "surname_form_label" : "Apellidos *",
+    "email_form_label" : "Email *",
+    "phone_form_label" : "Teléfono *",
+    "I have read and accept the " : "He leído y acepto el ",
+    "Legal advice" : "Aviso legal",
+    " and the " : " y la ",
+    "Privacy policy" : "Política de privacidad",
+    "Submit" : "Enviar",
+    "Please fill in all required fields" : "Por favor completa todos los campos",
+    "The email was sent successfully" : "Email enviado correctamente",
+    "Error submitting the form" : "Error al enviar el formulario",
+    "404 - Page Not Found" : "404 - Página no encontrada"
+}

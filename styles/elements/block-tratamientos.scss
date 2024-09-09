@@ -1,0 +1,167 @@
+.bloque-tratamiento {
+    //height: 400px;
+    height: 480px;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: 0.5s all;
+    border: 1px solid transparent;
+    border-radius: 136px;
+    //padding: 25px 15px;
+    background-color: $color-white;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $color-white;
+        //background-image: none !important;
+        transition: 0.5s all;
+        border-color: $color-primary;
+
+        .flip-info {
+            opacity: 1;
+            background-color: rgba(238, 238, 238, .85);
+        }
+    }
+
+    .flip-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //justify-content: center;
+        height: 100%;
+        margin-bottom: 42px;
+        justify-content: space-around;
+        transition: 0.5s all;
+        opacity: 0;
+        padding: 25px 15px;
+        border-radius: 136px;
+
+        p {
+            font-size: 16px;
+            line-height: 23px;
+            color: $color-primary;
+            text-align: center;
+
+            &.link-arrow {
+                color: $color-primary;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 600;
+                font-family: var(--mainFontBold);
+                text-transform: uppercase;
+                display: inline-flex;
+                align-items: center;
+
+                &::after {
+                    content: "";
+                    background-image: url('/images/icono-flecha-boton-azul.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 22px;
+                    height: 5px;
+                    display: block;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    + a {
+        h3 {
+            text-align: center;
+            color: $color-primary;
+            font-size: 18px;
+            line-height: 25px;
+            font-weight: 600;
+            font-family: var(--mainFontBold);
+            margin-top: 42px;
+        }
+    }
+
+    @media (min-width:992px) and (max-width:1199px) {
+        height: 310px;
+
+        .flip-info {
+            img {
+                width: 60px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @media (min-width:768px) and (max-width:991px) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        + a {
+            h3 {
+                margin-top: 24px;
+                margin-bottom: 56px;
+            }
+        }
+    }
+
+    @media (max-width:767px) {
+        width: 145px;
+        height: 145px;
+        border-radius: 50%;
+        margin: 0 auto;
+
+        .flip-info {
+            opacity: 1!important;
+            padding: 0;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        + a {
+            display: block;
+            text-align: center;
+            margin-bottom: 50px;
+
+            h3 {
+                margin-top: 10px;
+                margin-bottom: 6px;
+                letter-spacing: 1.8px;
+
+                + p {
+                    color: $color-primary;
+                    font-size: 16px;
+                    line-height: 23px;
+                    text-align: center;
+                }
+            }
+
+            p.link-arrow.d-md-none {
+                color: $color-primary;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 600;
+                font-family: var(--mainFontBold);
+                text-transform: uppercase;
+                display: inline-flex;
+                align-items: center;
+
+                &::after {
+                    content: "";
+                    background-image: url('/images/icono-flecha-boton-azul.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 22px;
+                    height: 5px;
+                    display: block;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

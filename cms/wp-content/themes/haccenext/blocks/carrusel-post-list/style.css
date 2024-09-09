@@ -1,0 +1,193 @@
+.titulo_blog a:hover,
+.titulo_blog a{
+    color:#1f1f1f;
+}
+.last_posts_cards small,
+.card-text{
+    font-size:14px;
+    line-height:1.3em;
+}
+#theme-main .last_posts_cards  .card_trans .titulo_blog{
+    color:#1f1f1f;
+    font-size:1.3rem;
+}
+#theme-main .last_posts_cards  .card_trans{
+    background-color:transparent;
+    box-shadow:none;
+    border:none;
+
+
+}
+.album .card .img_card, .last_posts_cards .card .img_card{
+    background-color:transparent;
+}
+.last_posts_cards .card .img_card {
+    margin:0;
+}
+.last_posts_cards .no_rel_aspecto .card .img_card {
+    padding:0;
+}
+.last_posts_cards .no_rel_aspecto .card:hover .img_card img,
+.last_posts_cards .no_zoom_img .card:hover .img_card img {
+    transform: scale(1);
+}
+.last_posts_cards .no_rel_aspecto .card .img_card img {
+    position:relative;
+    top:initial;
+    right:initial;
+    left:initial;
+    object-fit: none;
+    height:auto;
+    width:auto;
+}
+
+.last_posts_cards .card_leer_mas .card .card-body{
+    padding-bottom:50px;
+}
+.last_posts_cards .card_leer_mas .card .card-body .btn-link{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+}
+.carrusel_posts_wrap .card_wrap{
+    padding:10px;
+    margin-bottom:0;
+}
+@media(max-width:767px){
+    .last_posts_cards .slick-slide>div{
+        display:flex;
+        justify-content: center;
+    }
+    .card_wrap{
+        max-width:400px;
+        margin:0 auto
+    }
+
+    .last_posts_cards .slick-slide .card_wrap{
+        margin:0;
+    }
+}
+
+/*Overlay*/
+
+body  .last_posts_cards .card_overlay .img_card{
+    padding-bottom:130%;
+    margin:0;
+}
+body  .carrusel_posts_wrap {
+    overflow:hidden;
+    padding-left:15px;
+}
+body  .carrusel_posts_wrap   .slick-list{
+    padding-left:0!important;
+}
+body .last_posts_cards .card_overlay .card-body .categorie strong{
+    font-weight:600;
+}
+body .last_posts_cards .card_overlay .card-body .categories,
+body .last_posts_cards .card_overlay .card-body .card-text,
+body .last_posts_cards .card_overlay .card-body small,
+body .last_posts_cards .card_overlay .card-body .titulo_blog a:hover,
+body .last_posts_cards .card_overlay .card-body .titulo_blog a{
+color:#fff;
+}
+body .last_posts_cards .card_overlay .card-body .card-text{
+    margin-bottom:5px;
+}
+body .last_posts_cards .card_overlay .card-body .titulo_blog a{
+    font-family:"bebas";
+    font-weight:bold;
+    font-size:30px;
+    line-height: 34px;
+    margin-bottom:0;
+}
+.inferior_post{
+    position: relative;
+    z-index: 10;
+
+}
+#theme-main .inferior_post .compartir_post,
+#theme-main .inferior_post .compartir_post *{
+    line-height:1em;
+    height:auto;
+    font-size:1em;
+}
+.inferior_post .share_post{
+    padding-left:0;
+}
+.inferior_post .addtoany_list,
+.inferior_post .addtoany_list.a2a_kit_size_32 a{
+    display:inline-block;
+}
+body .last_posts_cards .card_overlay .card-body .categories{
+text-transform:uppercase;
+    font-size:11px;
+    border-right:solid 1px #fff;
+    display:inline-block;
+    padding-right:8px;
+    margin-right:8px;
+
+}
+.carrusel_posts_wrap .slick-slider{
+    padding-top:50px;
+}
+.last_posts_cards  .slick-arrow {
+    border:solid 1px;
+    background-size: auto 10px;
+    top:0;
+}
+.last_posts_cards  .slick-arrow.slick-prev {
+    background-image: url(arrow.png);
+    right:80px;
+    left:initial;
+
+    transform: rotate(180deg);
+}
+.last_posts_cards  .slick-arrow.slick-next {
+    background-image: url(arrow.png);
+    right: 25px;
+    left:initial;
+}
+
+.last_posts_cards   .share_post img{
+    filter: invert(1);
+    max-height: 14px;
+    width: auto;
+    height: auto;
+}
+body .last_posts_cards .card_overlay .card-body{
+position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:0;
+    top: 0;
+    display:flex;
+    align-items: flex-end;
+
+}
+body .last_posts_cards .card_overlay .card-body>*{
+    z-index:10;
+    position:relative;
+}
+body .last_posts_cards .card_overlay .card-body:after,
+body .last_posts_cards .card_overlay .card-body:before{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    content:"";
+    height:30%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 43%,rgba(0,0,0,1) 95%);
+    transition:all ease .3s;
+    opacity:.7;
+}
+body .last_posts_cards .card_overlay .card-body:after{
+    background:rgba(0,0,0,0.4);
+    height:100%;
+    top:0;
+}
+body .last_posts_cards .card_overlay:hover .card-body:before{
+    height:80%;
+    opacity:1;
+}

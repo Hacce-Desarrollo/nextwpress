@@ -1,0 +1,46 @@
+.hero-home {
+    text-align: center;
+    
+    .wp-block-cover__background {
+        background-color: #ffffff;
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+    }
+
+    .raton-icon {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    @media (min-width:768px) and (max-width:991px) {
+        .haccenext-hero-logo {
+            img {
+                width: 280px;
+            }
+        }
+    }
+
+    @media (max-width:767px) {
+        .haccenext-hero-logo {
+            img {
+                width: 250px;
+            }
+        }
+    }
+}
+
+.tratamientos-row.wp-block-columns:not(.is-not-stacked-on-mobile) {
+    @media (min-width:768px) and (max-width:991px) {
+        > .wp-block-column {
+            flex-basis: 50% !important;
+        }
+    }
+}
+

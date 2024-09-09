@@ -1,0 +1,148 @@
+.form-haccenext {
+
+    form {
+
+        .p-float-label {
+            margin-bottom: 30px;
+
+            input:focus ~ label,
+            input:-webkit-autofill ~ label,
+            input.p-filled ~ label,
+            textarea:focus ~ label,
+            textarea.p-filled ~ label,
+            .p-inputwrapper-focus ~ label,
+            .p-inputwrapper-filled ~ label,
+            .p-tooltip-target-wrapper ~ label {
+                font-size: 11px;
+                top: -0.3rem;
+            }
+
+            .radiobutton {
+                display: inline-flex;
+                align-items: center;
+
+                .p-radiobutton-label {
+                    position: relative;
+                    top: 0;
+                    opacity: 1;
+                    font-size: 15px;
+                    margin-top: 0;
+                }
+            }
+        }
+        
+        input:not(.form-check-input):not(.p-radiobutton-input) {
+            width: 100%;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(255,255,255,.7);
+            color: $color-white;
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    .p-inputtext:enabled:focus {
+        box-shadow: none;
+        border-color: rgba(255,255,255,1);
+    }
+
+    input,
+    textarea {
+        +label {
+            padding-left: 0px;
+            left: 0;
+            top: 10px;
+        }
+    }
+
+    .p-calendar {
+        width: 100%;
+
+        + label {
+            left: 0;
+        }
+    }
+
+    label {
+        color: $color-white;
+        opacity: .7;
+        font-size: 14px;
+
+        &.notFloating {
+            position: relative;
+            left: 0;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+    }
+
+    .form-check {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+
+        input.form-check-input {
+            width: 14px;
+            height: 14px;
+            border-radius: 0px;
+            border: 0px;
+            margin-right: 8px;
+        }
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select.form-select,
+    textarea {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #333;
+        padding-left: 0px;
+        font-size: 15px;
+    }
+
+    input[type=text]:focus,
+    input[type=email]:focus,
+    input[type=tel]:focus,
+    textarea:focus {
+        border-bottom: 2px solid #A07A5F !important;
+    }
+
+    .form-check-input:checked {
+        background-color: #A07A5F;
+        border-color: #A07A5F;
+    }
+
+    .btnsubmit {
+        background: transparent !important;
+        color: #A07A5F !important;
+        font-family: 'Open Sans', sans-serif !important;
+        font-size: 12px !important;
+        line-height: 23px !important;
+        border-radius: 0px !important;
+        border: 0px !important;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: #333333 !important;
+        }
+    }
+
+    &.form-light {
+        form {
+            input:not(.form-check-input):not(.p-radiobutton-input) {
+                border-bottom: 1px solid rgba(	4, 41, 70,.7);
+                color: $color-primary;
+            }
+            label {
+                color: $color-primary;
+            }
+        }
+    }
+}
