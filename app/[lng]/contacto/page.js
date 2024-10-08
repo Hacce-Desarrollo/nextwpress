@@ -4,8 +4,7 @@ import Image from "next/image";
 import { languages } from "@/app/i18n/config";
 import { mainFont, mainFontBold } from "@/styles/fonts";
 import styles from '@/styles/general.scss';
-import FormularioInfo from '@/app/components/Formularios/FormularioInfo';
-import FormularioCita from '@/app/components/Formularios/FormularioCita';
+import FormContact from '@/app/components/Forms/FormContact';
 import iconoLocalizacion from '@/public/images/icono-localizacion.svg';
 import iconoTelefono from '@/public/images/icono-telefono.svg';
 import iconoEmail from '@/public/images/icono-email.svg';
@@ -71,7 +70,7 @@ export default async function equipo({ params: { lng } }) {
                                         <TabView className="tabs-forms">
 
                                             <TabPanel header={ labels['request_info'] }>
-                                                <FormularioInfo lng={lng} />
+                                                <FormContact lng={lng} />
                                             </TabPanel>
 
                                         </TabView>

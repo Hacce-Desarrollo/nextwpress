@@ -10,14 +10,14 @@ import { Button } from 'primereact/button';
 import SpacerHeight from "@/app/components/misc/SpacerHeight";
 import { useTranslation } from 'react-i18next';
 
-export default function FormularioInfo(props) {
+export default function FormContact(props) {
 
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
         
         const handleLanguageChange = (lng) => {
-            //console.log('Idioma cambiado a:', lng);
+            //console.log('Lang changed to:', lng);
         };
     
         i18n.on('languageChanged', handleLanguageChange);
@@ -34,13 +34,10 @@ export default function FormularioInfo(props) {
 
     const [formData, setFormData] = useState({
         name: "",
-        apellidos: "",
-        phone: "",
+        surname: "",
         email: "",
-        fnacimiento: "",
-        pais: "",
-        preferencia: "",
-        check: false,
+        phone: "",
+        legalcheck: false,
     });
 
     const handleSubmit = async ( event ) => {
@@ -69,13 +66,10 @@ export default function FormularioInfo(props) {
                 document.getElementById( 'responseText' ).classList.remove( 'hidden' );
                 setFormData({
                     name: "",
-                    apellidos: "",
+                    surname: "",
                     email: "",
                     phone: "",
-                    fnacimiento: "",
-                    pais: "",
-                    preferencia: "",
-                    check: false,
+                    legalcheck: false,
                 });
             } else {
                 document.getElementById( 'responseText' ).innerHTML = t( "Error submitting the form" );
@@ -126,8 +120,8 @@ export default function FormularioInfo(props) {
 
                         <InputText
                             id="floatingInput1"
-                            name="apellidos"
-                            value={formData.apellidos}
+                            name="surname"
+                            value={formData.surname}
                             onChange={handleChange}
                             required
                             placeholder={ t( "surname_form_label" ) }
@@ -172,7 +166,7 @@ export default function FormularioInfo(props) {
                             className="form-check-input"
                             type="checkbox"
                             id="flexCheckDefault"
-                            name="check"
+                            name="legalcheck"
                             checked={formData.check}
                             onChange={handleChange}
                             required

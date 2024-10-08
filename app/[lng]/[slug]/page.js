@@ -12,11 +12,17 @@ export async function generateMetadata({ params: { slug, lng }}) {
 
 export async function generateStaticParams() {
     let pages = [];
-    for ( let lng of languages ) {
-        pages = pages.concat( await graphqlWordpress.getPages( lng ) );
+    const excludedPages = ['blog', 'contacto', 'equipo'];
+
+    for (let lng of languages) {
+        const allPages = await graphqlWordpress.getPages(lng);
+        const filteredPages = allPages.filter(page => !excludedPages.includes(page.slug));
+        pages = pages.concat(filteredPages);
     }    
     return pages;
 }
+
+
 
 export default async function Page({params: { slug, lng }}) {
 
