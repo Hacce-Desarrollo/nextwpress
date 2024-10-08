@@ -10,14 +10,14 @@ export default function CustomDropdown({ currentLanguage, languageList, handleCh
     const customStyles = {
         dropdown: {
             textTransform: 'uppercase',
-            color: '#042946',
+            color: '#4F1D13',
             fontSize: '14px',
         },
         dropdownPanel: {
             backgroundColor: '#f0f0f0',
         },
         option: {
-            color: '#042946', // Color del texto
+            color: '#4F1D13', // Color del texto
             backgroundColor: '#fff', // Fondo blanco
             fontSize: '14px',
             padding: '3px 10px',

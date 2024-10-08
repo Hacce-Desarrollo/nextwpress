@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+$color-primary: #4F1D13;
+$color-secondary: #EDE1CD;
+$color-yellow: #D7984F;
+$color-white: #ffffff;
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -70,6 +75,15 @@
   }
 }
 
+.maxwidth750pxm0auto{
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.has-large-font-size{
+
+}
+
 .h2-title {
   letter-spacing: 2.6px;
   font-family: var(--mainFontBold);
@@ -87,6 +101,16 @@
     letter-spacing: 2px;
     margin-bottom: 16px;
   }
+}
+
+.h3-title{
+  letter-spacing: 2px;
+  font-family: var(--mainFontBold);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 20px;
+
 }
 
 .wp-block-hacce-wrapper {
@@ -114,7 +138,28 @@
     font-size: 15px;
     line-height: 24px;
     margin-bottom: 20px;
-    color: #042946;
+    color: $color-primary;
+    position: relative;
+    padding-left: 1.5em;
+  }
+
+  &.bullets-yellow {
+    
+    li{
+
+      &::marker {
+        content: '';
+      }
+
+      &::before {
+        content: '•';
+        color: $color-yellow;
+        position: absolute;
+        left: 0;
+        font-size: 2em;
+        line-height: 24px;
+      }
+    }
   }
 }
 

@@ -9,7 +9,7 @@ header {
         z-index: 100;
         text-align: -webkit-center;
         opacity: 1;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: $color_secondary;
         padding: 10px 24px;
         display: inline-flex;
         align-items: center;
@@ -19,9 +19,7 @@ header {
         transition: 0.5s all;
 
         &:not(.scrolled) {
-            border-bottom: 1px solid #E2E2E2;
             box-shadow: none;
-            background-color: rgba(255, 255, 255, 0);
             transition: 0.5s all;
         }
 

@@ -67,46 +67,38 @@ export default async function Home({ params: { lng } }) {
 
             <div className="wp-block-hacce-wrapper cta-blue">
 
-                <div className="container">
+                <div className="wp-block-cover text-center">
 
-                    <div className="wp-block-cover text-center">
+                    <span aria-hidden="true" className="wp-block-cover__background has-background-dim"></span>
 
-                        <span aria-hidden="true" className="wp-block-cover__background has-background-dim"></span>
+                    <Image src={ page.infoInicio?.imagenDelFondo?.node?.mediaItemUrl || '' } width={900} height={417} alt={ page.infoInicio?.imagenDelFondo?.node?.altText || '' } className="wp-block-cover__image-background" />
 
-                        <Image src={ page.infoInicio?.imagenDelFondo?.node?.mediaItemUrl || '' } width={900} height={417} alt={ page.infoInicio?.imagenDelFondo?.node?.altText || '' } className="wp-block-cover__image-background" />
+                    <div className="wp-block-cover__inner-container is-layout-constrained wp-block-cover-is-layout-constrained">
 
-                        <div className="wp-block-cover__inner-container is-layout-constrained wp-block-cover-is-layout-constrained">
+                        <div className="wp-block-group double-img is-nowrap is-layout-flex wp-container-core-group-is-layout-1 wp-block-group-is-layout-flex">
 
-                            <div className="wp-block-group double-img is-nowrap is-layout-flex wp-container-core-group-is-layout-1 wp-block-group-is-layout-flex">
+                            <figure className="wp-block-image">
+                                <Image src={ page.infoInicio?.imagen1?.node?.mediaItemUrl || '' } width={509} height={79} alt={ page.infoInicio?.imagen2?.node?.altText || '' } className="wp-image-165" />
+                            </figure>
 
-                                <figure className="wp-block-image">
-                                    <Image src={ page.infoInicio?.imagen1?.node?.mediaItemUrl || '' } width={142} height={65} alt={ page.infoInicio?.imagen2?.node?.altText || '' } className="wp-image-165" />
-                                </figure>
+                        </div>
 
-                                <figure className="wp-block-image">
-                                    <Image src={ page.infoInicio?.imagen2?.node?.mediaItemUrl || '' } width={482} height={88} alt={ page.infoInicio?.imagen2?.node?.altText || '' } className="wp-image-507" />
-                                </figure>
+                        <SpacerHeight height="40" />
 
+                        <div className="has-text-align-center">
+                            { parse( page?.infoInicio?.textoCta || '' ) }
+                        </div>
+
+                        <SpacerHeight height="28" />
+
+                        <div className="wp-block-buttons btn-custom btn-white is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-2 wp-block-buttons-is-layout-flex">
+                            <div className="wp-block-button">
+                                { page.infoInicio?.enlace?.url ? (
+                                <Link href={ page.infoInicio.enlace.url || '' } passHref>
+                                    { page.infoInicio?.enlace?.title || '' }
+                                </Link>
+                                ) : null }
                             </div>
-
-                            <SpacerHeight height="40" />
-
-                            <div className="has-text-align-center">
-                                { parse( page?.infoInicio?.textoCta || '' ) }
-                            </div>
-
-                            <SpacerHeight height="28" />
-
-                            <div className="wp-block-buttons btn-custom btn-white is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-2 wp-block-buttons-is-layout-flex">
-                                <div className="wp-block-button">
-                                    { page.infoInicio?.enlace?.url ? (
-                                    <Link href={ page.infoInicio.enlace.url || '' } passHref>
-                                        { page.infoInicio?.enlace?.title || '' }
-                                    </Link>
-                                    ) : null }
-                                </div>
-                            </div>
-
                         </div>
 
                     </div>
@@ -115,6 +107,7 @@ export default async function Home({ params: { lng } }) {
 
             </div>
 
+            { page.infoInicio?.descripcionContacto ? (
             <div className="section">
                 <div className="slider-gallery">
                     <div className="container">
@@ -138,8 +131,11 @@ export default async function Home({ params: { lng } }) {
                             <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow" ></div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>                
+            </div>            
+            ) : 
+            <SpacerHeight height="200" /> 
+            }
             
         </div>
 

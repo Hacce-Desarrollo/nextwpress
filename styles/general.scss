@@ -41,8 +41,14 @@ body.blog main#main{
     font-family: var(--mainFontBold);
 } 
 
-$color-primary: #042946;
+$color-primary: #4F1D13;
+$color-secondary: #EDE1CD;
+$color-yellow: #D7984F;
 $color-white: #ffffff;
+
+body {
+    background: linear-gradient(to bottom, $color-secondary, #FFF);
+}
 
 
 @import 'parts/header.scss';

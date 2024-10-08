@@ -41,7 +41,7 @@ export default async function Footer() {
 
                                 { logoFooter_src && (
                                 <Link href={ "/" + lng }>
-                                    <Image src={logoFooter_src} alt={logoFooter_alt} width={135} height={61} />
+                                    <Image src={logoFooter_src} alt={logoFooter_alt} width={193} height={30} />
                                 </Link>
                                 )}
                                 
@@ -51,11 +51,13 @@ export default async function Footer() {
 
                                     <p>{footerInfo_dir}</p>
 
+                                    { footerInfo_tel && footerInfo_mail ? (
                                     <p>
                                         { footerInfo_tel ? ( <Link href={"tel:" + footerInfo_tel.replace(/\s+/g, '')}>{footerInfo_tel}</Link> ) : null } 
                                         {" | "}
                                         { footerInfo_mail ? ( <Link href={"mailto:" + footerInfo_mail.replace(/\s+/g, '')}>{footerInfo_mail}</Link> ) : null }
                                     </p>
+                                    ) : null }
 
                                 </div>
 

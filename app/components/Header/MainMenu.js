@@ -86,8 +86,8 @@ export default function MainMenu({ menuppal, logo: mainLogo, lng = defaultLangua
                 <Image
                     src={logo}
                     alt="Logo"
-                    width={113}
-                    height={47}
+                    width={193}
+                    height={30}
                 />
 
             </Link>
