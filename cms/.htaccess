@@ -9,7 +9,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 #<If "%{HTTP_HOST} -strmatch '*.servidor.gal' && %{HTTP:X-Forwarded-For} != '54.36.177.68' && %{HTTP:X-Forwarded-For} != '83.48.20.72'">
 #        AuthType Basic
 #        AuthName "Entorno restringido"
-#        AuthUserFile /var/www/vhosts/haccenext.servidor.gal/.htpasswd
+#        AuthUserFile /var/www/vhosts/nextwpress.servidor.gal/.htpasswd
 #        Require valid-user
 #</If>
 
