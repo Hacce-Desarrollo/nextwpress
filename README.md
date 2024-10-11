@@ -32,3 +32,6 @@ Editar las variables **CMS_BASE** y **GRAPHQL_BASE** con los valores adecuados.
 
 **CMS_BASE** debe apuntar al proyecto raíz de la instalación Wordpress objetivo que actuará como CMS (sin la / final).
 **GRAPHQL_BASE** será el endpoint de GraphQL (definido en los Settings del plugin de GraphQL) y debe empezar por /.
+
+
+## DEMO en funcionamiento: [NextWPress](https://nextwpress.servidor.gal/)
