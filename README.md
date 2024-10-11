@@ -2,7 +2,7 @@
 
 ## Crea un sitio web rápidamente con NextWPress un framework realizado con Next.js, el marco React más popular. Una solución gratuita y de código abierto desarrollada para facilitar el trabajo de programación.
 
-**[Descargar plantilla](https://github.com/Hacce-Desarrollo/nextwpress)**
+**<a href="https://github.com/Hacce-Desarrollo/nextwpress/" target="_blank">Descargar plantilla</a>**
 
 
 ## Wordpress
@@ -34,4 +34,4 @@ Editar las variables **CMS_BASE** y **GRAPHQL_BASE** con los valores adecuados.
 **GRAPHQL_BASE** será el endpoint de GraphQL (definido en los Settings del plugin de GraphQL) y debe empezar por /.
 
 
-## DEMO en funcionamiento: [NextWPress](https://nextwpress.servidor.gal/)
+## DEMO en funcionamiento: <a href="https://nextwpress.servidor.gal/" target="_blank">NextWPress</a>
