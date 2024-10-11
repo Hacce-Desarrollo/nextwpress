@@ -78,7 +78,7 @@ export default function SliderGallery(props) {
 
                             <div className="wp-block-column is-layout-flow wp-block-column-is-layout-flow" >
 
-                                <h2 className="wp-block-heading h2-title text-primary md:text-left text-center">
+                                <h2 className="wp-block-heading h2-title text-primary md:text-left text-center color-black-custom">
                                     { parse( props.data.slider_title || '' ) }
                                 </h2>
 
