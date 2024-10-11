@@ -19,6 +19,10 @@
 - **WPML String Translation**
 - **Yoast SEO**
 
+### Configurar WPML con los idiomas a utilizar (en NextWPress usamos /en y /es).
+
+### Crear los ACF necesarios, en NextWPress usamos de varios tipos para mostrar ejemplos.
+
 
 ## NEXT.JS
 
