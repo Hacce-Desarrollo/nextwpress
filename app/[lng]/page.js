@@ -14,7 +14,8 @@ import { generatePageMetadata } from "@/utils/metadata";
 import SliderGallery from "../components/SliderGallery/SliderGallery";
 
 export async function generateMetadata({ params: { lng, uri }}) {
-    return await generatePageMetadata( "inicio", lng );
+    const page = lng === 'es' ? 'inicio' : lng === 'en' ? 'home' : 'default-page';
+    return await generatePageMetadata( page, lng );
 }
 
 export async function generateStaticParams() {
